@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style/GeneralStyles'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from './pages/HomePage';
+import { Background } from './pages/BackgroundPage';
+import { Methodology } from './pages/MethodologyPage';
+import { About } from './pages/AboutPage';
+import { NoPageFound } from './pages/NoPageFound';
+import { Layout } from './components/Layout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+          <Layout>
+            <Router>
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/background" component={Background}/>
+                <Route path="/methodology" component={Methodology}/>
+                <Route path="/aboutus" component={About}/>
+                <Route component={NoPageFound}/>
+              </Switch>
+            </Router>
+          </Layout>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
