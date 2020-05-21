@@ -52,4 +52,13 @@ export const NavStyle = styled.div`
   }
 `;
 
+export const VisSectionStyle = styled.div`
+  .vis-section {
+    padding-top: 3%;
+  }
 
+  .vis-title {
+    font-weight: bold;
+  }
+
+`;

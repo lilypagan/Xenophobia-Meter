@@ -21,10 +21,10 @@ class NavigationBar extends React.Component {
               </Navbar.Collapse>
               <div className="contact-links">
                 <a href="https://twitter.com/XenophobiaMeter">
-                  <img className="icon" src={require('../assets/twitter-icon.png')} />
+                  <img alt="twitter icon" className="icon" src={require('../assets/twitter-icon.png')} />
                 </a>
                 <a href="https://twitter.com/XenophobiaMeter">
-                  <img className="icon" src={require('../assets/email-icon.png')} />
+                  <img alt="email icon" className="icon" src={require('../assets/email-icon.png')} />
                 </a>
               </div>
             </div>
