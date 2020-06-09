@@ -7,7 +7,7 @@ class NavigationBar extends React.Component {
     return (
       <NavStyle>
         <Navbar expand="lg"> 
-            <Navbar.Brand href="/">Xenophobia <br/> Meter Project</Navbar.Brand>
+            <Navbar.Brand href="/">Xenophobia Meter Project</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" /> 
 
             <div className="navbar-rightside">
@@ -19,14 +19,7 @@ class NavigationBar extends React.Component {
                   <Nav.Item><Nav.Link className= {this.props.activePage==='about' ? 'active': ''} eventKey="about" href="/aboutus">About Us</Nav.Link></Nav.Item>
                 </Nav>
               </Navbar.Collapse>
-              <div className="contact-links">
-                <a href="https://twitter.com/XenophobiaMeter">
-                  <img alt="twitter icon" className="icon" src={require('../assets/twitter-icon.png')} />
-                </a>
-                <a href="https://twitter.com/XenophobiaMeter">
-                  <img alt="email icon" className="icon" src={require('../assets/email-icon.png')} />
-                </a>
-              </div>
+
             </div>
         
         </Navbar>
