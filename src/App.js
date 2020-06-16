@@ -1,6 +1,6 @@
 import React from 'react';
 import './style/GeneralStyles'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, BrowserRouter } from 'react-router-dom';
 import  Home  from './pages/HomePage';
 import { Background } from './pages/BackgroundPage';
 import { Methodology } from './pages/MethodologyPage';
@@ -19,17 +19,17 @@ class App extends React.Component {
     return (
       <React.Fragment>
           <Layout>
-            <Router>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
               <Switch>
-                <Route exact path="/Xenophobia-Meter" component={Home}/>
-                <Route path="/Xenophobia-Meter/background" component={Background}/>
+                <Route exact path="/" component={Home}/>
+                <Route path="/background" component={Background}/>
                 <Route path="/Xenophobia-Meter/methodology" component={Methodology}/>
                 <Route path="/Xenophobia-Meter/aboutus" component={About}/>
                 <Route path="/Xenophobia-Meter/resources" component={Resources}/>
                 {countryPages}
                 <Route component={Home}/>
               </Switch>
-            </Router>
+            </BrowserRouter>
           </Layout>
       </React.Fragment>
     );
