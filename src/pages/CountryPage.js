@@ -7,6 +7,7 @@ import  { CountryPageStyle } from '../style/PageStyles';
 import { Text, StyleSheet } from "react-native";
 import CountryLineGraph from '../visualizations/CountryLineGraph';
 import TerminologyBox from '../components/TerminologyBox';
+import Fade from 'react-reveal/Fade';
 
 const styles = StyleSheet.create({
   visDescription: {
@@ -33,7 +34,7 @@ class CountryPage extends React.Component {
         <NavigationBar activePage="home"/>
         <AllStyles>
           <CountryPageStyle>
-            
+          <Fade bottom>
             <div className="country-intro">
               <h4 className="bold-text">{this.props.countryName}</h4>
               <p className="country-desc">{country_info}</p>
@@ -62,6 +63,7 @@ class CountryPage extends React.Component {
               <p className="italic-text section-notes">Learn more about our sentiment analysis through our <a href={process.env.PUBLIC_URL + '/#/methodology'} className="underline-text-link">Methodology</a> page.</p>
             </div>
             <TerminologyBox region="United States of America"/>
+            </Fade>
           </CountryPageStyle>
         </AllStyles>
       </React.Fragment>

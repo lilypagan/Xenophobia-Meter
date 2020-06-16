@@ -11,6 +11,7 @@ import CountryPage  from './pages/CountryPage';
 import worlddata from './data/worldMap';
 import { Resources } from './pages/ResourcesPage';
 import { Terminology } from './pages/TerminologyPage';
+import ScrollToTop  from './components/ScrollToTop';
 
 class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class App extends React.Component {
       <React.Fragment>
           <Layout>
             <Router>
+            <ScrollToTop/>
               <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/background" component={Background}/>

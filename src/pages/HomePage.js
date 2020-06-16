@@ -6,6 +6,7 @@ import WorldMap from '../visualizations/WorldMap';
 import  { HomePageStyles } from '../style/PageStyles';
 import testerdata from '../data/testerWorldMap.js';
 import TerminologyBox from '../components/TerminologyBox';
+import Fade from 'react-reveal/Fade';
 
 const styles = StyleSheet.create({
   visDescription: {
@@ -35,6 +36,7 @@ class Home extends React.Component {
         <NavigationBar activePage="home"/>
         <AllStyles>
           <HomePageStyles>
+          <Fade bottom>
             <div className="intro-section">
               <h1 className="bold-text">Xenophobia Meter Project (MVP) </h1>
               
@@ -45,7 +47,7 @@ class Home extends React.Component {
               <p className="grey-text">Last Updated: {testerdata.last_updated}</p>
               <p className="grey-text">(Note: this MVP is currently using mock data only — real data to come shortly!)</p>          
             </div>
-
+            
             <div className="section-container">
               <h5 className="bold-text">Worldwide Xenophobic Sentiment</h5>
               <Text style={styles.visDescription}>Percentage of verified tweets (per country) referencing foreigners that are scored as having a <Text style={styles.bold}>negative sentiment</Text></Text>
@@ -54,7 +56,7 @@ class Home extends React.Component {
             </div>
 
             <TerminologyBox region="world"/>
-
+            </Fade >
           </HomePageStyles>
         </AllStyles>
       </React.Fragment>
