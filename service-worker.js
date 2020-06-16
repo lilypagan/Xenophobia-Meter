@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Xenophobia-Meter/precache-manifest.01f52e9a10d4ec12247a351d08c4f6df.js"
+  "/Xenophobia-Meter/precache-manifest.0f018be185d7391953b49acd8e0a1167.js"
 );
 
 self.addEventListener('message', (event) => {

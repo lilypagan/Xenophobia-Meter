@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Xenophobia-Meter/static/css/main.64f2fca7.chunk.css",
-    "main.js": "/Xenophobia-Meter/static/js/main.873a4257.chunk.js",
-    "main.js.map": "/Xenophobia-Meter/static/js/main.873a4257.chunk.js.map",
+    "main.js": "/Xenophobia-Meter/static/js/main.ae1030fd.chunk.js",
+    "main.js.map": "/Xenophobia-Meter/static/js/main.ae1030fd.chunk.js.map",
     "runtime-main.js": "/Xenophobia-Meter/static/js/runtime-main.e7f2b0ef.js",
     "runtime-main.js.map": "/Xenophobia-Meter/static/js/runtime-main.e7f2b0ef.js.map",
     "static/css/2.a1b7a17e.chunk.css": "/Xenophobia-Meter/static/css/2.a1b7a17e.chunk.css",
     "static/js/2.9bf4769f.chunk.js": "/Xenophobia-Meter/static/js/2.9bf4769f.chunk.js",
     "static/js/2.9bf4769f.chunk.js.map": "/Xenophobia-Meter/static/js/2.9bf4769f.chunk.js.map",
     "index.html": "/Xenophobia-Meter/index.html",
-    "precache-manifest.01f52e9a10d4ec12247a351d08c4f6df.js": "/Xenophobia-Meter/precache-manifest.01f52e9a10d4ec12247a351d08c4f6df.js",
+    "precache-manifest.0f018be185d7391953b49acd8e0a1167.js": "/Xenophobia-Meter/precache-manifest.0f018be185d7391953b49acd8e0a1167.js",
     "service-worker.js": "/Xenophobia-Meter/service-worker.js",
     "static/css/2.a1b7a17e.chunk.css.map": "/Xenophobia-Meter/static/css/2.a1b7a17e.chunk.css.map",
     "static/css/main.64f2fca7.chunk.css.map": "/Xenophobia-Meter/static/css/main.64f2fca7.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.a1b7a17e.chunk.css",
     "static/js/2.9bf4769f.chunk.js",
     "static/css/main.64f2fca7.chunk.css",
-    "static/js/main.873a4257.chunk.js"
+    "static/js/main.ae1030fd.chunk.js"
   ]
 }
