@@ -27,7 +27,7 @@ class App extends React.Component {
                 <Route path="/aboutus" component={About}/>
                 <Route path="/resources" component={Resources}/>
                 {countryPages}
-                <Route component={NoPageFound}/>
+                <Route component={Home}/>
               </Switch>
             </Router>
           </Layout>
