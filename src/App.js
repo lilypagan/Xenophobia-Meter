@@ -1,6 +1,6 @@
 import React from 'react';
 import './style/GeneralStyles'
-import { BrowserRouter as Router, Route, Switch, BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import  Home  from './pages/HomePage';
 import { Background } from './pages/BackgroundPage';
 import { Methodology } from './pages/MethodologyPage';
