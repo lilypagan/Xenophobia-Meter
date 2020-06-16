@@ -21,11 +21,11 @@ class App extends React.Component {
           <Layout>
             <Router>
               <Switch>
-                <Route exact path={process.env.PUBLIC_URL + '/'} component={Home}/>
-                <Route path={process.env.PUBLIC_URL + '/background'} component={Background}/>
-                <Route path={process.env.PUBLIC_URL + '/methodology'} component={Methodology}/>
-                <Route path={process.env.PUBLIC_URL + '/aboutus'} component={About}/>
-                <Route path={process.env.PUBLIC_URL + '/resources'} component={Resources}/>
+                <Route exact path="/" component={Home}/>
+                <Route path="/background" component={Background}/>
+                <Route path="/methodology" component={Methodology}/>
+                <Route path="/aboutus" component={About}/>
+                <Route path="/resources" component={Resources}/>
                 {countryPages}
                 <Route component={Home}/>
               </Switch>

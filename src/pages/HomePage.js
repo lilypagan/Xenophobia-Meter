@@ -36,7 +36,7 @@ class Home extends React.Component {
         <AllStyles>
           <HomePageStyles>
             <div className="intro-section">
-              <h1 className="bold-text">Xenophobia Meter Project (MVP)-test </h1>
+              <h1 className="bold-text">Xenophobia Meter Project (MVP)-test2 </h1>
               
               <h5 className="italic-text">Challenging discrimination with data.</h5>
               <br/>
