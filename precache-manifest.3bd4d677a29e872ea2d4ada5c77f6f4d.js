@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a585169ce51ba38ff0f4ca0db1954d7c",
+    "revision": "f3cd77d731a18b38759f1ded19982529",
     "url": "/Xenophobia-Meter/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Xenophobia-Meter/static/css/2.a1b7a17e.chunk.css"
   },
   {
-    "revision": "c34407063891ad8349af",
+    "revision": "bea0e9dc1f353820fbae",
     "url": "/Xenophobia-Meter/static/css/main.64f2fca7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Xenophobia-Meter/static/js/2.05f8154b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c34407063891ad8349af",
-    "url": "/Xenophobia-Meter/static/js/main.05e7a32e.chunk.js"
+    "revision": "bea0e9dc1f353820fbae",
+    "url": "/Xenophobia-Meter/static/js/main.78ad8173.chunk.js"
   },
   {
     "revision": "708a72a2ab2698e78c40",
