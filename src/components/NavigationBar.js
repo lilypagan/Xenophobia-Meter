@@ -14,9 +14,9 @@ class NavigationBar extends React.Component {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto" onSelect={(selectedKey) => this.togglePage(`${selectedKey}`)}>
                   <Nav.Item><Nav.Link  className= {this.props.activePage==='home' ? 'active': ''} eventKey="home" href='/'>Home</Nav.Link></Nav.Item>
-                  <Nav.Item><Nav.Link className= {this.props.activePage==='background' ? 'active': ''} eventKey="background" href='/background'>Background</Nav.Link></Nav.Item>
-                  <Nav.Item><Nav.Link className= {this.props.activePage==='methodology' ? 'active': ''} eventKey="methodology" href='/methodology'>Methodology</Nav.Link></Nav.Item>
-                  <Nav.Item><Nav.Link className= {this.props.activePage==='resources' ? 'active': ''} eventKey="resources" href='/resources'>Resources</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link className= {this.props.activePage==='background' ? 'active': ''} eventKey="background" href='/#/background'>Background</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link className= {this.props.activePage==='methodology' ? 'active': ''} eventKey="methodology" href='/#/methodology'>Methodology</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link className= {this.props.activePage==='resources' ? 'active': ''} eventKey="resources" href='/#/resources'>Resources</Nav.Link></Nav.Item>
                 </Nav>
               </Navbar.Collapse>
 

@@ -86,7 +86,7 @@ class WorldMap extends Component {
                onMouseOut={() => this.removeToolTip()}
                />
             :
-               <a href={"country/"+d.properties.name}><path
+               <a href={"#/country/"+d.properties.name}><path
                fill={this.findColor(d.properties.name)}
                key={'path' + i}
                stroke="#CECECE"
