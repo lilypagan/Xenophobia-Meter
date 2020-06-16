@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Xenophobia/Frontend-React.git/static/css/main.64f2fca7.chunk.css",
-    "main.js": "/Xenophobia/Frontend-React.git/static/js/main.dafc10ca.chunk.js",
-    "main.js.map": "/Xenophobia/Frontend-React.git/static/js/main.dafc10ca.chunk.js.map",
-    "runtime-main.js": "/Xenophobia/Frontend-React.git/static/js/runtime-main.7f9a1b2a.js",
-    "runtime-main.js.map": "/Xenophobia/Frontend-React.git/static/js/runtime-main.7f9a1b2a.js.map",
-    "static/css/2.a1b7a17e.chunk.css": "/Xenophobia/Frontend-React.git/static/css/2.a1b7a17e.chunk.css",
-    "static/js/2.81a90539.chunk.js": "/Xenophobia/Frontend-React.git/static/js/2.81a90539.chunk.js",
-    "static/js/2.81a90539.chunk.js.map": "/Xenophobia/Frontend-React.git/static/js/2.81a90539.chunk.js.map",
-    "index.html": "/Xenophobia/Frontend-React.git/index.html",
-    "precache-manifest.ebc4437527a9e22912938a7774ded030.js": "/Xenophobia/Frontend-React.git/precache-manifest.ebc4437527a9e22912938a7774ded030.js",
-    "service-worker.js": "/Xenophobia/Frontend-React.git/service-worker.js",
-    "static/css/2.a1b7a17e.chunk.css.map": "/Xenophobia/Frontend-React.git/static/css/2.a1b7a17e.chunk.css.map",
-    "static/css/main.64f2fca7.chunk.css.map": "/Xenophobia/Frontend-React.git/static/css/main.64f2fca7.chunk.css.map",
-    "static/js/2.81a90539.chunk.js.LICENSE.txt": "/Xenophobia/Frontend-React.git/static/js/2.81a90539.chunk.js.LICENSE.txt"
+    "main.css": "/Xenophobia/Frontend-React/static/css/main.64f2fca7.chunk.css",
+    "main.js": "/Xenophobia/Frontend-React/static/js/main.f5fb436a.chunk.js",
+    "main.js.map": "/Xenophobia/Frontend-React/static/js/main.f5fb436a.chunk.js.map",
+    "runtime-main.js": "/Xenophobia/Frontend-React/static/js/runtime-main.ece2b09d.js",
+    "runtime-main.js.map": "/Xenophobia/Frontend-React/static/js/runtime-main.ece2b09d.js.map",
+    "static/css/2.a1b7a17e.chunk.css": "/Xenophobia/Frontend-React/static/css/2.a1b7a17e.chunk.css",
+    "static/js/2.bcf33dd9.chunk.js": "/Xenophobia/Frontend-React/static/js/2.bcf33dd9.chunk.js",
+    "static/js/2.bcf33dd9.chunk.js.map": "/Xenophobia/Frontend-React/static/js/2.bcf33dd9.chunk.js.map",
+    "index.html": "/Xenophobia/Frontend-React/index.html",
+    "precache-manifest.b112a36754eafa1c7e5d74440da6a0c3.js": "/Xenophobia/Frontend-React/precache-manifest.b112a36754eafa1c7e5d74440da6a0c3.js",
+    "service-worker.js": "/Xenophobia/Frontend-React/service-worker.js",
+    "static/css/2.a1b7a17e.chunk.css.map": "/Xenophobia/Frontend-React/static/css/2.a1b7a17e.chunk.css.map",
+    "static/css/main.64f2fca7.chunk.css.map": "/Xenophobia/Frontend-React/static/css/main.64f2fca7.chunk.css.map",
+    "static/js/2.bcf33dd9.chunk.js.LICENSE.txt": "/Xenophobia/Frontend-React/static/js/2.bcf33dd9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7f9a1b2a.js",
+    "static/js/runtime-main.ece2b09d.js",
     "static/css/2.a1b7a17e.chunk.css",
-    "static/js/2.81a90539.chunk.js",
+    "static/js/2.bcf33dd9.chunk.js",
     "static/css/main.64f2fca7.chunk.css",
-    "static/js/main.dafc10ca.chunk.js"
+    "static/js/main.f5fb436a.chunk.js"
   ]
 }
