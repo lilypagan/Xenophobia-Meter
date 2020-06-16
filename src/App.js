@@ -19,17 +19,17 @@ class App extends React.Component {
     return (
       <React.Fragment>
           <Layout>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Router>
               <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/background" component={Background}/>
-                <Route path="/Xenophobia-Meter/methodology" component={Methodology}/>
-                <Route path="/Xenophobia-Meter/aboutus" component={About}/>
-                <Route path="/Xenophobia-Meter/resources" component={Resources}/>
+                <Route exact path={process.env.PUBLIC_URL + '/'} component={Home}/>
+                <Route path={process.env.PUBLIC_URL + '/background'} component={Background}/>
+                <Route path={process.env.PUBLIC_URL + '/methodology'} component={Methodology}/>
+                <Route path={process.env.PUBLIC_URL + '/aboutus'} component={About}/>
+                <Route path={process.env.PUBLIC_URL + '/resources'} component={Resources}/>
                 {countryPages}
                 <Route component={Home}/>
               </Switch>
-            </BrowserRouter>
+            </Router>
           </Layout>
       </React.Fragment>
     );
