@@ -13,7 +13,7 @@ class TerminologyBox extends React.Component {
           <p>Top terms referencing foreigners that appear in tweets in 2020</p>
           <p className="italic-text bold-text terms-list">{terms}</p>
           <div className="clear"></div>
-          <p className="italic-text section-notes">How do we classify xenophobic sentiment? Learn more through our <a href="methdology" className="underline-text-link">Methodology</a> page.</p>
+          <p className="italic-text section-notes">How do we classify xenophobic sentiment? Learn more through our <a href={process.env.PUBLIC_URL + '/#/terminology'} className="underline-text-link">Terminology</a> page.</p>
         </div>
       </AllStyles>
     );

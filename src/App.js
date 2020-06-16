@@ -10,6 +10,7 @@ import { Layout } from './components/Layout';
 import CountryPage  from './pages/CountryPage';
 import worlddata from './data/worldMap';
 import { Resources } from './pages/ResourcesPage';
+import { Terminology } from './pages/TerminologyPage';
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class App extends React.Component {
                 <Route path="/methodology" component={Methodology}/>
                 <Route path="/aboutus" component={About}/>
                 <Route path="/resources" component={Resources}/>
+                <Route path="/terminology" component={Terminology}/>
                 {countryPages}
                 <Route component={NoPageFound}/>
               </Switch>

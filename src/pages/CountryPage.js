@@ -59,7 +59,7 @@ class CountryPage extends React.Component {
                 </div>
               </div>
               <br></br>
-              <p className="italic-text section-notes">Learn more about our sentiment analysis through our <a href="/methodology" className="underline-text-link">Methodology</a> page.</p>
+              <p className="italic-text section-notes">Learn more about our sentiment analysis through our <a href={process.env.PUBLIC_URL + '/#/methodology'} className="underline-text-link">Methodology</a> page.</p>
             </div>
             <TerminologyBox region="United States of America"/>
           </CountryPageStyle>
