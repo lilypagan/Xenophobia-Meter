@@ -16,7 +16,7 @@ class NavigationBar extends React.Component {
                   <Nav.Item><Nav.Link  className= {this.props.activePage==='home' ? 'active': ''} eventKey="home" href="/">Home</Nav.Link></Nav.Item>
                   <Nav.Item><Nav.Link className= {this.props.activePage==='background' ? 'active': ''} eventKey="background" href="/background">Background</Nav.Link></Nav.Item>
                   <Nav.Item><Nav.Link className= {this.props.activePage==='methodology' ? 'active': ''} eventKey="methodology" href="/methodology">Methodology</Nav.Link></Nav.Item>
-                  <Nav.Item><Nav.Link className= {this.props.activePage==='about' ? 'active': ''} eventKey="about" href="/aboutus">About Us</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link className= {this.props.activePage==='resources' ? 'active': ''} eventKey="resources" href="/resources">Resources</Nav.Link></Nav.Item>
                 </Nav>
               </Navbar.Collapse>
 

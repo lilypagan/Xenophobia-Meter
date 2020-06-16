@@ -1,16 +1,21 @@
 import React from 'react';
 import './style/GeneralStyles'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home } from './pages/HomePage';
+import  Home  from './pages/HomePage';
 import { Background } from './pages/BackgroundPage';
 import { Methodology } from './pages/MethodologyPage';
 import { About } from './pages/AboutPage';
 import { NoPageFound } from './pages/NoPageFound';
 import { Layout } from './components/Layout';
-import { CountryPage } from './pages/CountryPage';
+import CountryPage  from './pages/CountryPage';
+import worlddata from './data/worldMap';
+import { Resources } from './pages/ResourcesPage';
 
 class App extends React.Component {
   render() {
+    const countryPages = worlddata.features
+      .map((d) => <Route path={"/country/"+d.properties.name} render={() => <CountryPage countryName={d.properties.name} />}/>
+    )
     return (
       <React.Fragment>
           <Layout>
@@ -20,7 +25,8 @@ class App extends React.Component {
                 <Route path="/background" component={Background}/>
                 <Route path="/methodology" component={Methodology}/>
                 <Route path="/aboutus" component={About}/>
-                <Route path="/country" render={(props) => <CountryPage {...props} countryName="U.S." />}/>
+                <Route path="/resources" component={Resources}/>
+                {countryPages}
                 <Route component={NoPageFound}/>
               </Switch>
             </Router>

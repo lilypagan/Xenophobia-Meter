@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 
 import "react-datepicker/dist/react-datepicker.css";
 
-class DateFilter extends React.Component {
+class YearlyFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,7 +28,7 @@ class DateFilter extends React.Component {
         <FilterStyles>
           <div className="date-filters-section">
             <div className="date-filter">
-              <p className="filter-title">End Date</p>
+              <p className="filter-title">Year Selected</p>
               <DatePicker
                 selected={this.state.endDate}
                 onChange={date => this.setEndDate(date)}
@@ -36,24 +36,16 @@ class DateFilter extends React.Component {
                 startDate={this.state.startDate}
                 endDate={this.state.endDate}
                 minDate={this.state.startDate}
-                dateFormat="MMMM d, yyyy"
+                showYearPicker
+                disabled
+      dateFormat="yyyy"
                 showDisabledMonthNavigation
                 showPopperArrow={false}
               />
+              <br></br>
+              <p className="filter-note">(coming soon)</p>
             </div>
-            <div className="date-filter">
-              <p className="filter-title">Start Date</p>
-              <DatePicker
-                selected={this.state.startDate}
-                onChange={date => this.setStartDate(date)}
-                selectsStart
-                startDate={this.state.startDate}
-                endDate={this.state.endDate}
-                dateFormat="MMMM d, yyyy"
-                showDisabledMonthNavigation
-                showPopperArrow={false}
-              />
-            </div>
+            
           </div>
         </FilterStyles>
        
@@ -62,4 +54,4 @@ class DateFilter extends React.Component {
   }
 }
 
-export default DateFilter;
+export default YearlyFilter;

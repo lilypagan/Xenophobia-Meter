@@ -1,14 +1,37 @@
 import styled from 'styled-components';
 
 export const WorldMapStyle = styled.div`
-  .world-map {
-    
-   
+  .countries {
+    &:hover {
+      fill: grey;
+    }
   }
 
-  .world-map .legend-text {
+  .legend-text {
     font-size: 10px;
-    color: red;
     font-weight: 500;
   }
+
+  .world-map-container {
+    margin-top: 4.5%;
+  }
+
+  .tooltip-container {
+    height: 44px;
+    border-left: grey 3px solid;
+    padding-left: 8px;
+  }
+
+  .country-name {
+    margin-bottom: 0px;
+    font-weight: 700;
+  }
+`
+
+export const CountryLineGraphStyle = styled.div`
+  .line-graph-countainer {
+    width: 100%;
+    height: 100%;
+  }
+
 `
