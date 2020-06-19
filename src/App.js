@@ -9,9 +9,11 @@ import { NoPageFound } from './pages/NoPageFound';
 import { Layout } from './components/Layout';
 import CountryPage  from './pages/CountryPage';
 import worlddata from './data/worldMap';
-import { Resources } from './pages/ResourcesPage';
+import  Resources  from './pages/ResourcesPage';
 import { Terminology } from './pages/TerminologyPage';
 import ScrollToTop  from './components/ScrollToTop';
+import Footer from './components/Footer';
+import { Article } from './pages/COVIDArticle';
 
 class App extends React.Component {
   render() {
@@ -30,11 +32,13 @@ class App extends React.Component {
                 <Route path="/aboutus" component={About}/>
                 <Route path="/resources" component={Resources}/>
                 <Route path="/terminology" component={Terminology}/>
+                <Route path="/COVID-article" component={Article}/>
                 {countryPages}
                 <Route component={NoPageFound}/>
               </Switch>
             </Router>
           </Layout>
+          <Footer/>
       </React.Fragment>
     );
   }

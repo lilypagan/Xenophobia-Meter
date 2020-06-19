@@ -11,16 +11,15 @@ import Fade from 'react-reveal/Fade';
 const styles = StyleSheet.create({
   visDescription: {
     fontSize: 18,
-    fontFamily:'Muli'
+    fontFamily:'Muli, san-serif',
+  },
+  mapExplainerTxt: {
+    fontFamily:'Muli, san-serif',
+    fontSize: 17,
   },
   bold: {
     fontWeight: "bold"
   },
-
-  tweetText: {
-    fontFamily:'Muli',
-    fontSize: 15,
-  }
 });
 
 class Home extends React.Component {
@@ -53,6 +52,32 @@ class Home extends React.Component {
               <Text style={styles.visDescription}>Percentage of verified tweets (per country) referencing foreigners that are scored as having a <Text style={styles.bold}>negative sentiment</Text></Text>
               <WorldMap />
               <p className="italic-text section-notes">Click on each country to explore more trends, statistics and terminology for that specific regions.</p>
+            </div>
+
+            <div className="map-explainer-container">
+              <div className="map-explainer-main">
+                <div className="map-explainer-left">
+                  <h2 className="map-explainer-title bold-text">How is this map<br/> significant?</h2>
+                </div>
+                <div className="map-explainer-right">
+                <Text style={styles.mapExplainerTxt}>Although sentiment analysis of hate speech is a complex and unresolved issue in the computing world, our display of positive and negative sentiments can still provide you with insight into how prevalent possibly xenophobic attitudes. <br/><br/>
+               Through this visualization, we hope to reveal not the percentage of tweets that are anti-foreigner, but instead the percentage of tweets bringing up the topic of “foreigners” that are also using generically negative sentiment. This number will be an estimated reflection on the types of conversations that are happening online (for or against foreigners) and how that can shape the culture and policies in a region.
+               <br/><br/><br/>
+               <Text style={styles.bold}>So it’s a tweet mentioning foreigners with generally negative words surrounding it. Does that make it xenophobia?</Text>
+               <br/><br/>
+               Identifying this combination in a tweet does not make it (or the sender) xenophobic! The use of terms equating to “foreigners” with generally negative sentiment can occur for many different reasons — to express xenophobic sentiment, to report xenophobic behavior/incidents or for purely journalistic purposes. This variability in usage makes it impossible to deem such “negative” tweets as actually xenophobic. 
+               <br/><br/>
+               Another thing to note is that traditionally xenophobic terms can also be re-appropriated by some to refer to themselves, as a symbol of strength and pride. 
+               </Text>
+                
+                </div>
+              </div>
+              <p className="italic-text section-notes">Learn more about our sentiment analysis through our <a href={process.env.PUBLIC_URL + '/#/methodology'} className="underline-text-link">Methdology</a> page.</p>
+            </div>
+
+            <div className= "to-resources-container">
+              <h3 className="bold-text">Want to learn more and take action against xenophobia?</h3>
+              <a href={process.env.PUBLIC_URL + '/#/resources'} className="underline-text-link"><h5>Here is a collection of resources to get you started!  </h5></a>
             </div>
 
             <TerminologyBox region="world"/>

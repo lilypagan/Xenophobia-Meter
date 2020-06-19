@@ -8,7 +8,7 @@ export const NavStyle = styled.div`
     align-items: flex-start;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 15px;
+    padding-top: 15px;
     
   }
 
@@ -46,6 +46,10 @@ export const NavStyle = styled.div`
 `;
 
 export const AllStyles = styled.div`
+
+  .text-center {
+    text-align: center;
+  }
   .italic-text {
     font-style: italic;
   }
@@ -61,6 +65,9 @@ export const AllStyles = styled.div`
   .underline-text-link {
     text-decoration: underline; 
     color: black;
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .semi-bold-text {
@@ -81,6 +88,10 @@ export const AllStyles = styled.div`
     margin-bottom: 5%;
   }
 
+  .white-text {
+    color: #FFFFFF;
+  }
+
   .clear {
     clear:both;
   }
@@ -97,14 +108,85 @@ export const AllStyles = styled.div`
     padding-bottom: 25px;
   }
 
+  .page-header {
+    background-color: #FAF5C0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 0;
+    
+  }
+
+  .header-title {
+    padding-top: 13%;
+    padding-bottom: 13%;
+    font-size: 39px;
+  }
+
+  .header-title-sub {
+    padding-top: 12%;
+    padding-bottom: 1.5%;
+    font-size: 39px;
+  }
+
+  .header-subtitle {
+    padding-bottom: 12%;
+    font-size: 18px;
+  }
 `;
 
 export const FooterStyles = styled.div`
   .icon {
     height: 27px;
     width: 27px;
-    margin: 10px;
-    margin-bottom: 0px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .email-icon {
+    height: 44px;
+    width: 35px;
+    margin-top: 10px;
+  }
+
+  .footer-container {
+    background-color: #434343;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 12%;  
+    padding-right: 13%; 
+    display: flex; 
+  }
+
+  .footer-right {
+    float: right:
+    width: 50%;
+    color: white;
+    margin-left: 26%;
+  }
+
+  .footer-left {
+    float: left:
+    width: 50%;
+    color: white;
+  }
+
+  .footer-slogan {
+    margin-top: 6%;
+  }
+
+  .link-container {
+    width: 100%;
+    margin-top: 10%;
+  }
+
+  .link-text {
+    color: #FFFFFF;
+    text-decoration: none;
+    float: right;
   }
 
 `;

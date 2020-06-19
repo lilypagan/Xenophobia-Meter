@@ -34,6 +34,54 @@ export const HomePageStyles = styled.div`
     font-weight: bold;
   }
 
+  .map-explainer-container {
+    background-color: #FAF5C0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 14%;  
+    padding-right: 13%;  
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom: 8%;
+    display: inline-block;
+  }
+
+  .map-explainer-title {
+    padding-bottom: 10%;
+    border-bottom: black 4px solid;
+  }
+
+  .map-explainer-main {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .map-explainer-left {
+    width: 30%;
+    float:left;
+    display: flex;
+  }
+
+  .map-explainer-right {
+    width: 65%;
+    float:right;
+    margin-left: 5%;
+    display:flex;
+    font-weight: light;
+  }
+
+  .to-resources-container {
+    padding-top: 3%;
+    border-top: #F9AA46 6px solid;
+    margin-bottom: 8%;
+    
+  }
+
 `;
 
 export const CountryPageStyle = styled.div`
@@ -62,3 +110,124 @@ export const CountryPageStyle = styled.div`
 
   }
 `;
+
+export const BackgroundPageStyle = styled.div`
+
+  .background-section-center {
+    text-align: center;
+    padding: 4%;
+    margin-bottom: 1%;
+  }
+
+  .section-left {
+    display:flex;
+    float:left;
+    width: 15%;
+  }
+  .section-right {
+    display: flex;
+    margin-left: 25%;
+    width: 76.5%;
+
+  }
+
+  .section-title {
+    padding-bottom: 10%;
+    border-bottom: #F9AA46 5px solid;
+  }
+
+  .section-text {
+    font-size: 18px;
+    color: #434343;
+  }
+
+  .background-section {
+    margin-bottom: 7%;
+    
+  }
+
+  .twitter-link {
+    color: black;
+    text-decoration: underline;
+  }
+
+`;
+
+export const ResourcesPageStyle = styled.div `
+  .resource-section {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+
+  .article-container {
+    border: solid 1px #434343;
+    border-radius: 12px;
+    padding: 2%;
+    margin-top: 3%;
+  }
+
+  .article-title {
+    color: #DD7C01;
+    margin-bottom: 0.5%;
+    font-size: 20px;
+  }
+
+  .article-teaser {
+    margin-top: 3%;
+    color: #434343
+  }
+
+  .article-link {
+    text-decoration: none; 
+    color: black;
+    
+  }
+
+  .full-article-title {
+    color: #434343;
+
+  }
+
+  .full-article-header {
+    padding-top: 12%;
+    padding-bottom: 5%;
+  }
+
+  .full-article-date {
+    color: #706E6E;
+  }
+
+  .article-body-container {
+    margin-top: 7%;
+    margin-bottom: 5%;
+  }
+`
+
+export const MethodologyPageStyles = styled.div `
+  .section-left {
+    display:flex;
+    float:left;
+    width: 15%;
+  }
+  .section-right {
+    display: flex;
+    margin-left: 25%;
+    width: 68%;
+
+  }
+
+  .section-title {
+    padding-bottom: 10%;
+    border-bottom: #F9AA46 5px solid;
+  }
+
+  .section-text {
+    font-size: 18px;
+    color: #434343;
+  }
+
+  .methodology-section {
+    margin-bottom: 7%;
+    margin-top: 5%;
+  }
+`
