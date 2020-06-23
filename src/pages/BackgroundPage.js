@@ -55,11 +55,13 @@ export const Background = () => (
               <h6 className="section-text">Stay tuned for our official launch with real Twitter data! In the next few weeks, we will be up and running with the following new features: <br/><br/>
           1. Date filtering 
           <br/>
-          2. Term submission
+          2. Display of real tweets, their sentiment scores and user feedback options
           <br/>
           3. Form to fight disinformation
           <br/>
           4. Monthly newsletter sign up
+          <br/>
+          5. Term submission
           <br/><br/>
           Connect with us on <a href="https://twitter.com/XenophobiaMeter" className="twitter-link">Twitter</a> to get updates on our work and the fight against xenophobia.
           </h6>
