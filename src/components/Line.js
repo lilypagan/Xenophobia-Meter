@@ -14,6 +14,7 @@ class Line extends React.Component {
   componentDidMount() {
     const node = this.ref.current;
     const { xScale, yScale, data, lineGenerator, term, index } = this.props
+    console.log(data)
     
     const initialData = data.map(d => ({
       name: d.name,

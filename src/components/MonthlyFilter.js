@@ -1,24 +1,45 @@
 import React from 'react';
 import { AllStyles, FilterStyles } from '../style/GeneralStyles';
 import DatePicker from 'react-datepicker';
-
+import moment from 'moment';
 import "react-datepicker/dist/react-datepicker.css";
+import testerdata2 from '../data/testerWorldMapAPI.json';
+ 
 
 class MonthlyFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       startDate: new Date("2020/01/01"),
-      endDate: new Date("2020/06/01")
+      endDate: new Date("2020/07/01"),
     }
   }
-
+  
   setStartDate(date) {
     this.setState({startDate: date})
+    const startDate = moment(this.state.startDate).format('YYYYMMDD')
+    const endDate = moment(this.state.endDate).format('YYYYMMDD')
+    this.props.onSelectMonth(testerdata2); //TODO: delete once data flowing
+    fetch(`/api/retrieve/world/${startDate}/${endDate}`).then(response =>
+      response.json().then(data => {
+        this.props.onSelectMonth(testerdata2); //TODO: change to data once data flowing
+        console.log(testerdata2)
+
+      })
+    );
   }
 
   setEndDate(date) {
     this.setState({endDate: date})
+    const startDate = moment(this.state.startDate).format('YYYYMMDD')
+    const endDate = moment(this.state.endDate).format('YYYYMMDD')
+    this.props.onSelectMonth(testerdata2); //TODO: delete once data flowing
+    fetch(`/api/retrieve/world/${startDate}/${endDate}`).then(response =>
+      response.json().then(data => {
+        this.props.onSelectMonth(testerdata2); //TODO: change to data once data flowing
+        console.log(testerdata2)
+      })
+    );
   }
 
   render() {
@@ -36,11 +57,11 @@ class MonthlyFilter extends React.Component {
                 startDate={this.state.startDate}
                 endDate={this.state.endDate}
                 minDate={this.state.startDate}
-                showMonthYearPicker
-                dateFormat="MMMM yyyy"
+                // showMonthYearPicker
+                dateFormat="MMMM dd, yyyy"
                 showDisabledMonthNavigation
                 showPopperArrow={false}
-                disabled
+                // disabled
               />
               
             </div>
@@ -52,13 +73,12 @@ class MonthlyFilter extends React.Component {
                 selectsStart
                 startDate={this.state.startDate}
                 endDate={this.state.endDate}
-                showMonthYearPicker
-                dateFormat="MMMM yyyy"
+                // showMonthYearPicker
+                dateFormat="MMMM dd, yyyy"
                 showDisabledMonthNavigation
                 showPopperArrow={false}
-                disabled
+                // disabled
               />
-              <p className="filter-note">(coming soon)</p>
             </div>
             
           </div>

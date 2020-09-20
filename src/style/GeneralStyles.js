@@ -26,13 +26,18 @@ export const NavStyle = styled.div`
     margin-right: 12px;
 
     &:hover {
-      color: #9F9C9C;
+      color: #FBA130;
     }
   }
 
   .navbar-nav .active.nav-link {
     color: black;
     border-bottom: 2px solid black;
+
+    &:hover {
+      color: #FBA130;
+      border-bottom: 2px solid #FBA130;
+    }
   }
 
   .navbar-brand {
@@ -50,16 +55,38 @@ export const AllStyles = styled.div`
   .text-center {
     text-align: center;
   }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .item-center {
+    display: inline-block;
+  }
+
   .italic-text {
     font-style: italic;
   }
 
   .bold-text {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .grey-text {
     color: #949191;
+  }
+
+  .no-dec-link {
+    text-decoration: none;
+    color: black;
   }
 
   .underline-text-link {
@@ -72,6 +99,14 @@ export const AllStyles = styled.div`
 
   .semi-bold-text {
     font-weight: 600;
+  }
+
+  .light-text {
+    font-weight: 300;
+  }
+
+  .ultra-light-text {
+    font-weight: 200;
   }
 
   .section-notes {
@@ -108,6 +143,21 @@ export const AllStyles = styled.div`
     padding-bottom: 25px;
   }
 
+  .term {
+    float: left;
+    border: #676767 1px solid;
+    border-radius: 7px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-right: 20px;
+
+    &:hover {
+      background-color: #FBBC6C;
+    }
+  }
+
   .page-header {
     background-color: #FAF5C0;
     width: 100vw;
@@ -120,10 +170,27 @@ export const AllStyles = styled.div`
     
   }
 
-  .header-title {
+  .header-container {
     padding-top: 13%;
     padding-bottom: 13%;
     font-size: 39px;
+  }
+
+  .triangle-down {
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 40px solid #FAF5C0;
+    margin-left: 46%;
+    
+  }
+
+  .header-title {
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 6px;
   }
 
   .header-title-sub {
@@ -133,9 +200,10 @@ export const AllStyles = styled.div`
   }
 
   .header-subtitle {
-    padding-bottom: 12%;
+    // padding-bottom: 12%;
     font-size: 18px;
   }
+
 `;
 
 export const FooterStyles = styled.div`
@@ -161,11 +229,16 @@ export const FooterStyles = styled.div`
     display: flex; 
   }
 
-  .footer-right {
-    float: right:
+  .footer-middle {
+    float: right;
     width: 50%;
     color: white;
-    margin-left: 26%;
+    margin-left: 10%;
+  }
+
+  .footer-right {
+    float: right;
+    width: 30%;
   }
 
   .footer-left {
@@ -174,19 +247,24 @@ export const FooterStyles = styled.div`
     color: white;
   }
 
+  .footer-subtitle {
+    border-left: #F9AA46 4px solid;
+    padding-left: 3%;
+  }
+
   .footer-slogan {
-    margin-top: 6%;
+    margin-top: 4%;
   }
 
   .link-container {
     width: 100%;
-    margin-top: 10%;
+    margin-top: 6%;
+    
   }
 
   .link-text {
     color: #FFFFFF;
     text-decoration: none;
-    float: right;
   }
 
 `;
@@ -229,5 +307,101 @@ export const FilterStyles = styled.div`
     margin: 0;
   }
 
+
+`
+
+export const FeedbackStyles = styled.div`
+  .feedback-container {
+    margin-bottom: 8%;
+
+  }
+
+  .feedback-description {
+    margin-top: 2%;
+    font-size: 18px;
+  }
+
+  .tweet-container {
+    border: #979797 solid 1px;
+    width: 45%;
+    padding-top: 1.2%;
+    padding-bottom: 1.2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 9px;
+    margin-right: 0;
+    float: left;
+  }
+
+  .tweets-container {
+    margin-top: 4%;
+    margin-left: 10%;
+    
+  }
+
+  .footer-notes {
+    margin-left: 10%;
+    margin-top: 4%;
+    margin-right: 13%;
+  }
+
+  .icon {
+    height: 22px;
+    width: 22px;
+    float: left;
+    color: #979797;
+    margin-right: 3px;
+  }
+
+  .tweet-region {
+    float: left;
+  }
+
+  .tweet-date {
+    float: left;
+    padding-left: 10px;
+  }
+
+  .tweet {
+    float: left;
+    font-size: 15px;
+  }
+
+  .tweet-and-scoring-container {
+    margin-bottom: 5.6%;
+    overflow: hidden;
+  }
+
+  .scoring-container {
+    margin-left: 9%;
+    float: left;
+    width: 40%;
+    
+  }
+
+  .tweet-rating {
+    float: left;
+  }
+
+  .tweet-score {
+    float: left;
+    margin-left: 4px;
+  }
+
+  .positive {
+    color: #3D9A49;
+  }
+
+  .negative {
+    color: #AC4747;
+  }
+
+  .neutral {
+    color: #6C6C6C;
+  }
+  .rating-button {
+    border-radius: 11px;
+    margin-right: 4%;
+  }
 
 `

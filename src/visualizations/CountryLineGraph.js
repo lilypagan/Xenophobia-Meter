@@ -1,5 +1,5 @@
 import React from 'react';
-import line_graph_data from '../data/testerCountryGraph.js';
+import line_graph_data from '../data/testerCountryGraph.json';
 import { scaleLinear, scaleBand } from 'd3-scale';
 import { line, curveMonotoneX } from 'd3-shape';
 import Axis from '../components/Axis';
@@ -15,14 +15,51 @@ class CountryLineGraph extends React.Component {
   constructor() {
     super();
     this.state = {
-      xticks: ["Jan", "Feb", "Mar", "Apr", "May"],
+      xticks: [],
       maxY: 0,
       minY: 0,
+      data: line_graph_data 
     }
   }
 
   componentDidMount() {
-    this.findMaxY(line_graph_data["regions"][this.props.countryName][this.props.year])
+    this.findMaxY(this.state.data["counts"])
+    this.findTicks(this.state.data["counts"])
+
+    var isMockData = true; //change this to toggle between mock and real data
+    if (!isMockData) {
+      this.getData();
+    }
+  }
+
+  componentWillMount() {
+    this.findMaxY(this.state.data["counts"])
+    this.findTicks(this.state.data["counts"])
+
+  }
+  
+  getData() {
+    fetch(`/api/retrieve/${this.props.countryName}/2020`).then(response =>
+      response.json().then(data => {
+        this.setState({data: data})
+      })
+    )
+  }
+
+
+  findTicks(data) {
+    const ticks = []
+    Object.keys(data).map(function(term) {
+      var monthList = data[term]
+      monthList.map(function(monthDict){
+        Object.keys(monthDict).map(function(key){
+          if (key == 'month') {
+            ticks.push(monthDict[key])
+          }
+        })
+      }) 
+    })
+    this.setState({xticks:ticks})
   }
 
   findMaxY(data) {
@@ -63,7 +100,8 @@ class CountryLineGraph extends React.Component {
     const xTicks = this.state.xticks;
     const minY = this.state.minY;
     const maxY = this.state.maxY;
-    const data = line_graph_data["regions"][this.props.countryName][this.props.year]
+    
+    const data = this.state.data["counts"]
     const lineTranslate = width/12
 
     var svg = select(".country-line-graph")
@@ -89,12 +127,12 @@ class CountryLineGraph extends React.Component {
     .rangeRound([0, width]).padding(0.1);
 
     const yScale = scaleLinear()
-    .domain([855, 203491])
+    .domain([minY, maxY])
     .range([height, 0])
     .nice();
 
     const lineGen = line()
-    .x(d => xScale(d.name))
+    .x(d => xScale(d.month))
     .y(d => yScale(d.value))
     .curve(curveMonotoneX);
 

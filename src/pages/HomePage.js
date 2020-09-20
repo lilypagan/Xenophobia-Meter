@@ -4,9 +4,11 @@ import NavigationBar from '../components/NavigationBar';
 import { AllStyles } from '../style/GeneralStyles';
 import WorldMap from '../visualizations/WorldMap';
 import  { HomePageStyles } from '../style/PageStyles';
-import testerdata from '../data/testerWorldMap.js';
+import testerdata from '../data/testerWorldMap.json';
 import TerminologyBox from '../components/TerminologyBox';
+import UserFeedback from '../components/UserFeedback';
 import Fade from 'react-reveal/Fade';
+
 
 const styles = StyleSheet.create({
   visDescription: {
@@ -30,6 +32,9 @@ class Home extends React.Component {
 
   
   render() {
+
+
+
     return(
       <React.Fragment>
         <NavigationBar activePage="home"/>
@@ -37,14 +42,14 @@ class Home extends React.Component {
           <HomePageStyles>
           <Fade bottom>
             <div className="intro-section">
-              <h1 className="bold-text">Xenophobia Meter Project (MVP) </h1>
+              <h1 className="bold-text">Xenophobia Meter Project </h1>
               
               <h5 className="italic-text">Challenging discrimination with data.</h5>
               <br/>
               <br/>
-              <p className="intro-desc">We track xenophobic sentiment on Twitter, providing you with the tools to recognize and fight xenophobia in your community.</p>
+              <p className="intro-desc">We track xenophobic sentiment on Twitter, providing you with the data and resources to recognize and take action against xenophobia in your community.</p>
               <p className="grey-text">Last Updated: {testerdata.last_updated}</p>
-              <p className="grey-text">(Note: this MVP is currently using mock data only — real data to come shortly!)</p>          
+                    
             </div>
             
             <div className="section-container">
@@ -53,7 +58,7 @@ class Home extends React.Component {
               <WorldMap />
               <p className="italic-text section-notes">Click on each country to explore more trends, statistics and terminology for that specific regions.</p>
             </div>
-
+            
             <div className="map-explainer-container">
               <div className="map-explainer-main">
                 <div className="map-explainer-left">
@@ -68,17 +73,21 @@ class Home extends React.Component {
                <br/><br/>
                Identifying this combination in a tweet does not make it (or the sender) xenophobic! The use of terms equating to “foreigners” with generally negative sentiment can occur for many different reasons — to express xenophobic sentiment, to report xenophobic behavior/incidents or for purely journalistic purposes. This variability in usage makes it impossible to deem such “negative” tweets as actually xenophobic. 
                <br/><br/>
-               Another thing to note is that traditionally xenophobic terms can also be re-appropriated by some to refer to themselves, as a symbol of strength and pride. 
+              Traditionally xenophobic terms can also be re-appropriated by some to refer to themselves, as a symbol of strength and pride. This phenomenon has the potential to skew results — help us improve this by giving your feedback below!
+              <br/><br/>
+               *Note that we are only analyzing content from English-speaking countries, which excludes many other forms and outbreaks of global xenophobia.
+               
                </Text>
                 
                 </div>
               </div>
               <p className="italic-text section-notes">Learn more about our sentiment analysis through our <a href={process.env.PUBLIC_URL + '/#/methodology'} className="underline-text-link">Methdology</a> page.</p>
             </div>
+            <UserFeedback/>
 
             <div className= "to-resources-container">
               <h3 className="bold-text">Want to learn more and take action against xenophobia?</h3>
-              <a href={process.env.PUBLIC_URL + '/#/resources'} className="underline-text-link"><h5>Here is a collection of resources to get you started!  </h5></a>
+              <a href={process.env.PUBLIC_URL + '/#/resources'} className="underline-text-link"><h5 className="light-text">Here is a collection of resources to get you started!  </h5></a>
             </div>
 
             <TerminologyBox region="world"/>

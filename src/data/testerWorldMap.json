@@ -1,0 +1,17 @@
+{
+  "end_date": "2020-05-31T00:00:00",
+  "regions": 
+    {
+      "United States of America": {"UUID": 1, "total_tweets": 100, "negative_tweets": 73},
+      "United Kingdom": {"UUID": 2, "total_tweets": 100, "negative_tweets": 43},
+      "Australia": {"UUID": 3, "total_tweets": 100, "negative_tweets": 43},
+      "New Zealand": {"UUID": 4, "total_tweets": 100, "negative_tweets": 26},
+      "South Africa": {"UUID": 5, "total_tweets": 100, "negative_tweets": 61},
+      "Canada": {"UUID": 6, "total_tweets": 100, "negative_tweets": 34},
+      "Kenya": {"UUID": 7, "total_tweets": 100, "negative_tweets": 20}
+    }
+    
+  ,
+  "start_date": "2020-04-01T00:00:00",
+  "last_updated": "June 17th, 2020"
+}

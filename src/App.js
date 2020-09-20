@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './style/GeneralStyles'
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import  Home  from './pages/HomePage';
@@ -15,33 +15,32 @@ import ScrollToTop  from './components/ScrollToTop';
 import Footer from './components/Footer';
 import { Article } from './pages/COVIDArticle';
 
-class App extends React.Component {
-  render() {
-    const countryPages = worlddata.features
-      .map((d) => <Route path={"/country/"+d.properties.name} render={() => <CountryPage countryName={d.properties.name} />}/>
-    )
-    return (
-      <React.Fragment>
-          <Layout>
-            <Router>
-            <ScrollToTop/>
-              <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route path="/background" component={Background}/>
-                <Route path="/methodology" component={Methodology}/>
-                <Route path="/aboutus" component={About}/>
-                <Route path="/resources" component={Resources}/>
-                <Route path="/terminology" component={Terminology}/>
-                <Route path="/COVID-article" component={Article}/>
-                {countryPages}
-                <Route component={NoPageFound}/>
-              </Switch>
-            </Router>
-          </Layout>
-          <Footer/>
-      </React.Fragment>
-    );
-  }
+function App() {
+  const countryPages = worlddata.features
+    .map((d) => <Route path={"/country/"+d.properties.name} render={() => <CountryPage countryName={d.properties.name} />}/>
+  )
+
+  return(
+    <React.Fragment>
+        <Layout>
+          <Router>
+          <ScrollToTop/>
+            <Switch>
+              <Route exact path="/" component={Home}/>
+              <Route path="/background" component={Background}/>
+              <Route path="/methodology" component={Methodology}/>
+              <Route path="/aboutus" component={About}/>
+              <Route path="/resources" component={Resources}/>
+              <Route path="/terminology" component={Terminology}/>
+              <Route path="/COVID-article" component={Article}/>
+              {countryPages}
+              <Route component={NoPageFound}/>
+            </Switch>
+          </Router>
+        </Layout>
+        <Footer/>
+       </React.Fragment>
+  )
 }
 
 export default App;

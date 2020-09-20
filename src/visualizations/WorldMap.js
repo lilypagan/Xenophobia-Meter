@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import worlddata from '../data/worldMap';
 import { geoEquirectangular, geoPath } from 'd3-geo';
 import { WorldMapStyle } from '../style/VisStyles';
-import testerdata from '../data/testerWorldMap.js';
+import testerdata from '../data/testerWorldMap.json';
 import MonthlyFilter from '../components/MonthlyFilter';
 import ToolTip from '../components/ToolTip';
 
@@ -13,12 +13,30 @@ class WorldMap extends Component {
       this.state = {
          ShowTooltip: false,
          CurrentCountry: "",
-         CurrentPercentage: ""
+         CurrentPercentage: "",
+         data: testerdata,
       }
    }
 
+   componentDidMount() {
+      var isMockData = true; //change this to toggle between mock and real data
+      if (!isMockData) {
+         this.getData();
+      }
+   }
+
+   getData() {
+      //can change initial dates
+      fetch('/api/retrieve/world/20200101/20200701').then(response =>
+         response.json().then(currentData => {
+         this.setState({data:currentData});
+         })
+         
+      );
+   }
+
    findColor(country_name) {
-      const info_dict = testerdata["regions"][country_name]
+      const info_dict = this.state.data["regions"][country_name]
       if (info_dict===undefined) {
          return "#CECECE"
       } else {
@@ -26,7 +44,7 @@ class WorldMap extends Component {
             { pct: 0.0, color: { r: 252, g: 235, b: 109 } },
             { pct: 0.5, color: { r: 226, g: 129, b: 5 } },
             { pct: 1.0, color: { r: 170, g: 0, b: 0 } } ];
-         const pct = info_dict["xeno tweet count"]/info_dict["total tweet count"]
+         const pct = info_dict["negative_tweets"]/info_dict["total_tweets"]
          for (var i = 1; i < percentColors.length - 1; i++) {
             if (pct < percentColors[i].pct) {
                 break;
@@ -63,7 +81,12 @@ class WorldMap extends Component {
          })
    }
 
+   handleData = (currentData) => {
+      this.setState({data:currentData})
+   }
+
    render() {
+      console.log(this.state.data)
       var toolTipDiv = "";
       if (this.state.ShowTooltip == false) {
          toolTipDiv = ""
@@ -73,16 +96,17 @@ class WorldMap extends Component {
       }
       const projection = geoEquirectangular()
       const pathGenerator = geoPath().projection(projection)
+
       const countries = worlddata.features
          .map((d,i) => {
-            return testerdata["regions"][d.properties.name] === undefined ?
+            return this.state.data["regions"][d.properties.name] === undefined ?
                <path
                fill={this.findColor(d.properties.name)}
                key={'path' + i}
                stroke="#CECECE"
                d={pathGenerator(d)}
                className='countries'
-               onMouseOver = {() => testerdata["regions"][d.properties.name] === undefined ? this.addToolTip(d.properties.name, 0): this.addToolTip(d.properties.name, testerdata["regions"][d.properties.name]["xeno tweet count"]/testerdata["regions"][d.properties.name]["total tweet count"])}
+               onMouseOver = {() => this.state.data["regions"][d.properties.name] === undefined ? this.addToolTip(d.properties.name, 0): this.addToolTip(d.properties.name, this.state.data["regions"][d.properties.name]["negative_tweets"]/this.state.data["regions"][d.properties.name]["total_tweets"])}
                onMouseOut={() => this.removeToolTip()}
                />
             :
@@ -92,14 +116,14 @@ class WorldMap extends Component {
                stroke="#CECECE"
                d={pathGenerator(d)}
                className='countries'
-               onMouseOver = {() => testerdata["regions"][d.properties.name] === undefined ? this.addToolTip(d.properties.name, 0): this.addToolTip(d.properties.name, testerdata["regions"][d.properties.name]["xeno tweet count"]/testerdata["regions"][d.properties.name]["total tweet count"])}
+               onMouseOver = {() => this.state.data["regions"][d.properties.name] === undefined ? this.addToolTip(d.properties.name, 0): this.addToolTip(d.properties.name, this.state.data["regions"][d.properties.name]["negative_tweets"]/this.state.data["regions"][d.properties.name]["total_tweets"])}
                onMouseOut={() => this.removeToolTip()}
                /></a>
             }
          )
       return (
          <WorldMapStyle>
-            <MonthlyFilter />
+            <MonthlyFilter onSelectMonth={this.handleData}/>
             <div className="world-map-container">
                <div>{toolTipDiv}</div>
                <svg className="world-map" height="100%" width="100%" viewBox={"30 0 930 450"}>

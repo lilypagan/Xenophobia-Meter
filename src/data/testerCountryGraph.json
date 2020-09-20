@@ -1,0 +1,16 @@
+
+
+{
+  "region": "United States of America",
+  "year": 2020,
+  "counts": {
+    "immigrant": [
+      {"month":"Jan", "value": 0},
+      {"month": "Feb", "value": 400},
+      {"month": "Mar", "value": 900},
+      {"month": "Apr", "value": 490},
+      {"month": "May", "value":2000}
+    ]
+   
+  }
+}

@@ -9,12 +9,13 @@ export const Methodology = () => (
   <React.Fragment>
     <AllStyles>
       <MethodologyPageStyles>
-        <div className="page-header text-center">
+      <div className="page-header text-center">
           <Layout>
           <NavigationBar activePage="methodology"/>
           </Layout>
-          <h2  className="header-title bold-text">Methodology</h2>
+          <div  className="header-container"><h1 className="header-title  bold-text">Methodology</h1></div>
         </div>
+        <div className="triangle-down"></div>
         <Fade bottom>
           <div className="methodology-section">
             <div className="section-left">

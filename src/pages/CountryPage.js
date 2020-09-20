@@ -42,7 +42,7 @@ class CountryPage extends React.Component {
             <div className= "section-container">
               <h5 className="bold-text">Trends in Word Usage</h5>
               <p className="section-description">Number of verified tweets containing foreigner-related terms.</p>
-              <CountryLineGraph countryName={this.props.countryName} year="2020"/>
+              <CountryLineGraph countryName={this.props.countryName} />
               
             </div>
             <br></br>

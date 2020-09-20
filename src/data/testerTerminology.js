@@ -1,5 +1,4 @@
 export default {
-  "United States of America" : ["'immigrant'", "'illegals'", "'Chinese Virus'", "'refugee'", "'Mexicans'"],
-  "world" : ["'immigrant'", "'illegals'", "'Chinese Virus'", "'refugee'", "'foreigner'"],
-  
+  "region": "world",
+  "terms" : ["immigrant", "illegals", "Chinese Virus", "refugee", "Mexicans"],
 }

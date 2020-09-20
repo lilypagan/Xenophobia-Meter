@@ -79,8 +79,10 @@ export const HomePageStyles = styled.div`
     padding-top: 3%;
     border-top: #F9AA46 6px solid;
     margin-bottom: 8%;
-    
+   
   }
+
+
 
 `;
 
@@ -103,7 +105,6 @@ export const CountryPageStyle = styled.div`
   }
 
   .section-container .country-stat-container .stats-num {
-    font-family:'Cabin' !important;
     color: #C70202;
     font-size: 60px;
     margin-bottom:0;
@@ -157,6 +158,43 @@ export const ResourcesPageStyle = styled.div `
   .resource-section {
     margin-top: 3%;
     margin-bottom: 3%;
+    display: block;
+  }
+
+  .rep-button {
+    &:hover {
+      color: black;
+    }
+    box-shadow: 4px 4px grey;
+  }
+
+  .action-item {
+    margin-bottom: 5%;
+    // border-bottom: #FBA130 solid 2px;
+    padding-bottom: 2%;
+  }
+
+
+  .org-container {
+    background-color: #FAC888;
+    border-radius: 10px;
+    padding: 3%;
+    margin-bottom: 7%;
+    float: left;
+    margin-right: 3%;
+    margin-left: 3%;
+    box-shadow: 4px 4px grey;
+    align-items: center;
+
+    &:hover {
+      background-color: #FBA130;
+    }
+  }
+
+  .org-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: stretch;
   }
 
   .article-container {
@@ -164,6 +202,11 @@ export const ResourcesPageStyle = styled.div `
     border-radius: 12px;
     padding: 2%;
     margin-top: 3%;
+    box-shadow: 4px 4px grey;
+
+    &:hover {
+      background-color: #eeeeee;
+    }
   }
 
   .article-title {

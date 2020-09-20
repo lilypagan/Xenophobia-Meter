@@ -10,16 +10,18 @@ class Footer extends React.Component {
           <div className="footer-container">
             <div className="footer-left">
               <h4 className="white-text bold-text">Xenophobia Meter Project</h4>
-              <h6 className="italic-text white-text footer-slogan">Challenging discrimination through data.</h6>
+              <h6 className="italic-text white-text footer-slogan light-text">Challenging discrimination with data.</h6>
             </div>
-            <div className="footer-right">
-              <h5 className="white-text">Contact Us</h5>
-              <div className="link-container"></div>
+            <div className="footer-middle">
+              <h5 className="white-text footer-subtitle">CONTACT US</h5>
+              <h6 className="italic-text white-text footer-slogan light-text">Stay in touch! We'd love to hear from you.</h6>
+              <div className="link-container">
                 <a href="https://twitter.com/XenophobiaMeter" className="link-text">
                   <img alt="twitter icon" className="icon" src={require('../assets/twitter-icon.png')} />
-                  <p className="link-text">@XenophobiaMeter</p>
+                  <p className="link-text light-text">@XenophobiaMeter</p>
                 </a>
-                
+
+              </div>
               {/* <div className="link-container">
                 <a href="https://twitter.com/XenophobiaMeter">
                   <img alt="email icon" className="email-icon" src={require('../assets/email-icon.png')} />
@@ -27,8 +29,9 @@ class Footer extends React.Component {
                 </a>
               </div> */}
             </div>
+            
           </div>
-        </FooterStyles>
+          </FooterStyles>
       </AllStyles>
     );
   }
