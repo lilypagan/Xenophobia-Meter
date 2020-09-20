@@ -25,11 +25,11 @@ class CountryLineGraph extends React.Component {
   componentDidMount() {
     this.findMaxY(this.state.data["counts"])
     this.findTicks(this.state.data["counts"])
-
-    var isMockData = true; //change this to toggle between mock and real data
+    var isMockData = false; //change this to toggle between mock and real data
     if (!isMockData) {
       this.getData();
     }
+
   }
 
   componentWillMount() {
@@ -42,6 +42,7 @@ class CountryLineGraph extends React.Component {
     fetch(`/api/retrieve/${this.props.countryName}/2020`).then(response =>
       response.json().then(data => {
         this.setState({data: data})
+        console.log('response from api and setting new data')
       })
     )
   }

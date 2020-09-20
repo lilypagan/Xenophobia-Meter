@@ -30,8 +30,8 @@ class WorldMap extends Component {
       fetch('/api/retrieve/world/20200101/20200701').then(response =>
          response.json().then(currentData => {
          this.setState({data:currentData});
+         console.log('response from api and setting new data')
          })
-         
       );
    }
 

@@ -21,6 +21,7 @@ class TerminologyBox extends React.Component {
     fetch(`/api/retrieve/${this.props.region}/terms/highest/10`).then(response =>
       response.json().then(data => {
         this.setState({data: data})
+        console.log('response from api and setting new data')
       })
     )
   }
